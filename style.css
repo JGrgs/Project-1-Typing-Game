@@ -1,0 +1,103 @@
+body {
+    background: url(redmatrix.gif);
+}
+
+h1 {
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 40px;
+}
+
+button {
+margin-left: 550px;
+font-size: 25px;
+font-weight: bold;
+}
+
+p {
+    text-align: center;
+    color: #cfd6cf;
+    font-size: 30px;
+    font-weight: 500px;
+}
+
+#click-input-box {
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+#score-board {
+    display: inline-block;
+    padding: 10px;
+  
+    color: yellow;
+    font-size: 25px;
+    
+}
+
+#score {
+    padding-bottom: 5px;
+  
+    text-align: center;
+}
+
+#time-board {
+    display: inline-block;
+    padding: 10px;
+  
+    color: limegreen;
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+#time {
+    padding-bottom: 5px;
+  
+}
+
+
+#missed-board {
+    color: palegreen;
+    display: inline-block;
+  
+    font-size: 25px;
+    
+}
+
+#missed {
+    padding-bottom: 5px;
+  
+    text-align: center;
+    
+}
+
+#game-display {
+    width: 600px;
+    height: 400px;
+    border: 1px solid black;
+    background: #000000bf;
+    color: #c31515;
+    font-size: 30px;
+}
+
+#input-field {
+    width: 596px;
+    height: 50px;
+    background: black;
+    color: limegreen;
+    text-align: center;
+    font-size:30px;
+}
+
+#game-grid {
+    padding-left: 300px;
+}
+
+.words {
+    display: block;
+}
+
+#word1, #word2, #word3, #word4, #word5, #word6 {
+    padding-bottom: 30px;
+}
