@@ -104,6 +104,18 @@ function changeWordOnMatch(e) {
                     } }
 document.querySelector("#input-field").addEventListener("keydown", changeWordOnMatch)
 
+//functionality to check for winner and display the winner
+function checkWinner () {
+    if (p1ScoreCount.text() > p2ScoreCount.text()){
+        alert("Player 1 wins with a score of: " + p1ScoreCount.text() + ". But you have missed: " + p1MissesCount.text() + " words")
+    } else if (p2ScoreCount.text() > p1ScoreCount.text()) {
+        alert("Player 2 wins with: " + p2ScoreCount.text() + "points")
+    } else {
+        alert ("We have a tie, reload to play again")
+    }
+
+} 
+
 //functionality for timer
 var timeCount = $("#time-count");
 var time = 20;
