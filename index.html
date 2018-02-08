@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.3.1.js"></script>
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="start-screen">
+        <h1>Welcome to Type Fast</h1>
+        <p>Time to put your typing skills to work. Type as fast as you can before you run out of time.</p>
+        <button id="start-btn">Start Game</button>
+        <p id="click-input-box">After you Start Game, please click the "Type Word" box to start typing.</p>
+</div>
+    <div id="game-screen">
+
+        <h1>Type Fast</h1>
+        <p>Don't let the matrix distract you, focus on your typing.</p>
+        
+
+        <div id="game-grid">
+            <div id="score-board">
+                <div id="score">HITS</div>
+                <span id="p1-score">Player 1:</span>
+                <span id="p1-score-count">0</span>
+                <span id="p2-score">Player 2:</span>
+                <span id="p2-score-count">0</span>
+            </div>
+
+            
+
+            <div id="missed-board">
+                <div id="missed">MISSES</div>
+                <span id="p1-misses">Player 1:</span>
+                <span id="p1-misses-count">0</span>
+                <span id="p2-misses">Player 2:</span>
+                <span id="p2-misses-count">0</span>
+            </div>    
+
+            <div id="time-board">
+                    <div id="time">TIME LEFT</div>
+                    <span id="time-count">10</span>
+                </div>
+                
+                
+
+            <div id="game-display">
+                <span class="words" id="word1">word1</span>
+                <span class="words" id="word2">word2</span>
+                <span class="words" id="word3">word3</span>
+                <span class="words" id="word4">word4</span>
+                <span class="words" id="word5">word5</span>
+                <span class="words" id="word6">word6</span>            
+            </div>
+    
+
+        <input id="input-field" type="text" class="word-input" placeholder="Type Word">
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
