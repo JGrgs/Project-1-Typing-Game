@@ -38,6 +38,28 @@ var newWord6 = randomInt(displayedWords.length);
 var newDW6 = displayedWords[newWord6];
 $word6.text(newDW6);
 
+//functionality to check player1 input and add score
+var p1ScoreCount = $("#p1-score-count")
+var p2ScoreCount = $("#p2-score-count")
+var p1Score = 0
+var p2Score = 0
+
+function checkMatch(e) {
+    if(e.keyCode === 13){
+        var inputWord = $("#input-field").val()
+        
+        if (inputWord === newDW1 || inputWord === newDW2 || inputWord === newDW3 || inputWord === newDW4 || inputWord === newDW5 || inputWord === newDW6) {
+            p1Score = p1Score + 1;
+            p1ScoreCount.text(p1Score)
+            changeWordOnMatch(e)
+                
+            }
+            inputField = $("#input-field").val("")
+                      }
+                    
+                }
+document.querySelector("#input-field").addEventListener("keydown", checkMatch)
+
 //functionality to change words when typing matches
 function changeWordOnMatch(e) {
     if(e.keyCode === 13){
