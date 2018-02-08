@@ -263,3 +263,125 @@ function missHit6() {
     newWord = randomInt(displayedWords.length)
     newDW6 = displayedWords[newWord]
     $word6.text(newDW6) }
+
+//functionality to move words at different speeds and called the missed words counting function
+
+    var moveNSpeed = {
+
+        wordSpeed: [3, 3.5, 4, 4.5, 5, 5.5],
+        
+        
+        move1Fn: function () {
+            $word1.css({marginLeft: "+=" + randomInt(moveNSpeed.wordSpeed.length) + "px"})
+            if (parseInt($word1.css("marginLeft")) > 600){
+                missHit1();
+                if (time > 0) {
+                    p1Misses = p1Misses + 1;
+                    p1MissesCount.text(p1Misses);
+                    $word1.css({marginLeft: "0px"})
+                }
+                
+                if((p2Turn === "yes" || waitForYes === "yes") && time2 > 0) {
+                    p2Misses = p2Misses + 1;
+                    p2MissesCount.text(p2Misses)
+                    $word1.css({marginLeft: "0px"})
+                }    
+            }
+        },
+        
+        move2Fn: function () {
+            $word2.css({marginLeft: "+=" + randomInt(moveNSpeed.wordSpeed.length) + "px"})
+            if (parseInt($word2.css("marginLeft")) > 600){
+                missHit2();
+                if (time > 0) {
+                    p1Misses = p1Misses + 1;
+                    p1MissesCount.text(p1Misses);
+                    $word2.css({marginLeft: "0px"})
+                }
+                    
+                if((p2Turn === "yes" || waitForYes === "yes") && time2 > 0) {
+                    p2Misses = p2Misses + 1;
+                    p2MissesCount.text(p2Misses)
+                    $word2.css({marginLeft: "0px"})
+                }  
+            }
+        },
+        
+        move3Fn: function () {
+            $word3.css({marginLeft: "+=" + randomInt(moveNSpeed.wordSpeed.length) + "px"})
+            if (parseInt($word3.css("marginLeft")) > 600){
+                missHit3();
+                if (time > 0) {
+                    p1Misses = p1Misses + 1;
+                    p1MissesCount.text(p1Misses);
+                    $word3.css({marginLeft: "0px"})
+                }
+                    
+                if((p2Turn === "yes" || waitForYes === "yes") && time2 > 0) {
+                    p2Misses = p2Misses + 1;
+                    p2MissesCount.text(p2Misses)
+                    $word3.css({marginLeft: "0px"})
+            }  
+            }
+        },
+        
+        move4Fn: function () {
+            $word4.css({marginLeft: "+=" + randomInt(moveNSpeed.wordSpeed.length) + "px"})
+            if (parseInt($word4.css("marginLeft")) > 600){
+                missHit4();
+                    if (time > 0) {
+                        p1Misses = p1Misses + 1;
+                        p1MissesCount.text(p1Misses);
+                        $word4.css({marginLeft: "0px"})
+                    }
+                        
+                    if((p2Turn === "yes" || waitForYes === "yes") && time2 > 0) {
+                        p2Misses = p2Misses + 1;
+                        p2MissesCount.text(p2Misses)
+                        $word4.css({marginLeft: "0px"})
+                    }  
+            }
+        },
+        
+        move5Fn: function () {
+            $word5.css({marginLeft: "+=" + randomInt(moveNSpeed.wordSpeed.length) + "px"})
+            if (parseInt($word5.css("marginLeft")) > 600){
+                missHit5();
+                    if (time > 0) {
+                        p1Misses = p1Misses + 1;
+                        p1MissesCount.text(p1Misses);        
+                        $word5.css({marginLeft: "0px"})
+                    }
+                    
+                    if((p2Turn === "yes" || waitForYes === "yes") && time2 > 0) {
+                        p2Misses = p2Misses + 1;
+                        p2MissesCount.text(p2Misses)
+                        $word5.css({marginLeft: "0px"})
+                    }  
+            }
+        },
+        
+        move6Fn: function () {
+            $word6.css({marginLeft: "+=" + randomInt(moveNSpeed.wordSpeed.length) + "px"})
+            if (parseInt($word6.css("marginLeft")) > 600){
+                missHit6();
+                    if (time > 0) {
+                        p1Misses = p1Misses + 1;
+                        p1MissesCount.text(p1Misses)
+                        $word6.css({marginLeft: "0px"})
+                    }
+                    
+                    if((p2Turn === "yes" || waitForYes === "yes") && time2 > 0) {
+                        p2Misses = p2Misses + 1;
+                        p2MissesCount.text(p2Misses)
+                        $word6.css({marginLeft: "0px"})
+                    }  
+            }
+        } }
+        
+        var word1Move = setInterval(moveNSpeed.move1Fn, 20);
+        var word2Move = setInterval(moveNSpeed.move2Fn, 24);
+        var word3Move = setInterval(moveNSpeed.move3Fn, 28);
+        var word4Move = setInterval(moveNSpeed.move4Fn, 32);
+        var word5Move = setInterval(moveNSpeed.move5Fn, 36);
+        var word6Move = setInterval(moveNSpeed.move6Fn, 40);
