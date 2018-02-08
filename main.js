@@ -226,3 +226,40 @@ function countDown() {
                                 document.querySelector("#input-field").addEventListener("keydown", checkMatch2)
         }
 }
+
+//if word is untyped and reaches end of screen, delete and fire off new one and track count of misses
+var p1MissesCount = $("#p1-misses-count")
+var p2MissesCount = $("#p2-misses-count")
+var p1Misses = 0
+var p2Misses = 0
+
+
+function missHit1 () {
+    newWord = randomInt(displayedWords.length)
+    newDW1 = displayedWords[newWord]
+    $word1.text(newDW1) }
+
+function missHit2() {
+    newWord = randomInt(displayedWords.length)
+    newDW2 = displayedWords[newWord]
+    $word2.text(newDW2) }
+
+function missHit3() { 
+    newWord = randomInt(displayedWords.length)
+    newDW3 = displayedWords[newWord]
+    $word3.text(newDW3) }
+
+function missHit4() { 
+    newWord = randomInt(displayedWords.length)
+    newDW4 = displayedWords[newWord]
+    $word4.text(newDW4) }
+
+function missHit5() { 
+    newWord = randomInt(displayedWords.length)
+    newDW5 = displayedWords[newWord]
+    $word5.text(newDW5) }
+
+function missHit6() { 
+    newWord = randomInt(displayedWords.length)
+    newDW6 = displayedWords[newWord]
+    $word6.text(newDW6) }
