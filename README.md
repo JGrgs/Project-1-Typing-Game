@@ -28,17 +28,6 @@ HTML, CSS, JS and jQuery
 
 HTML was used to build the structure of my game. Styled with CSS, the game looked prettier for end users. As for the fun part, playing the game, JS and jQuery were used for functionality.
 
-### User Stories
-
-As a player, I can enter my player name for easier tracking of turns.
-
-As a player, I click a button to stand-in for dice-rolling, to find out what spot I will move to.
-
-As a player, my game piece moves forward or backward depending on the action assigned to each space and the number I "rolled".
-
-As a player, I can play a sub game if I land on a "challenge" space, so the game is more interesting.
-
-As a player, I know when I've won because it is announced clearly.
 
 ### Approach
 
@@ -58,7 +47,7 @@ Ability to resize my page without affecting styling.
 
 ### Future Work
 
-As a developer player, I want syntax instead of words so i can practice my syntax.
+As a developer playing this game, I want syntax instead of words so i can practice my syntax accuracy.
 
 As a player, I want an option to display my name.
 
