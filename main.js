@@ -112,9 +112,9 @@ document.querySelector("#input-field").addEventListener("keydown", changeWordOnM
 // functionality to check for winner and display the winner
 function checkWinner () {
     if (parseInt(game.player1.scoreBoard.text())> parseInt(game.player2.scoreBoard.text())) {
-        alert("Player 1 wins with a score of: " + game.player1.scoreBoard.text() + ". But you missed: " + game.player1.gameBoard.text() + " words")
+        alert("Player 1 wins with: " + game.player1.scoreBoard.text() +  "points. " + "But you missed: " + game.player1.gameBoard.text() + " words")
     } else if (parseInt(game.player2.scoreBoard.text())> parseInt(game.player1.scoreBoard.text())) {
-        alert("Player 2 wins with: " + game.player2.scoreBoard.text() + "points" + ". But you missed: " + game.player2.gameBoard.text() + " misses")
+        alert("Player 2 wins with: " + game.player2.scoreBoard.text() + "points. " + "But you missed: " + game.player2.gameBoard.text() + " words")
     } else {
         alert ("We have a tie, reload to play again")
     }
