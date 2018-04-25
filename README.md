@@ -43,9 +43,11 @@ Planning part was challenging as well.
 
 In JavaScript it was challenging to make my words move at different speeds and change words once they pass the game display box.
 
+Ability to resize my page without affecting styling.
+
 ### Future Work
 
-As a developer player, I want syntax instead of words so i can practice my syntax.
+As a developer playing this game, I want syntax instead of words so i can practice my syntax accuracy.
 
 As a player, I want an option to display my name.
 

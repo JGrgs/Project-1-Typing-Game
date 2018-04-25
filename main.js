@@ -1,7 +1,8 @@
 //declared an object containing my two players
 var game = {
     player1: { scoreBoard: $("#p1-score-count"), gameBoard: $("#p1-misses-count")},
-    player2: { scoreBoard: $("#p2-score-count"), gameBoard: $("#p2-misses-count")}
+    player2: { scoreBoard: $("#p2-score-count"), gameBoard: $("#p2-misses-count")},
+    start: false
 }
 
 game.currentPlayer = game.player1
@@ -124,7 +125,6 @@ function checkWinner () {
 //functionality for timer
 var timeCount = $("#time-count");
 var time = 20;
-var time2 = 18;
 var p2Turn;
 var waitForYes;
 
@@ -132,7 +132,7 @@ var timer = setInterval(countDown, 1000)
 
 function stopTimer () {
     clearInterval(timer);
-    timeCount.text(time) }
+    timeCount.text("20") }
 
 
 
@@ -164,6 +164,7 @@ function countDown() {
             
             switchPlayer();
         } else if (time === 0) {
+            stopTimer()
             endGame()
             checkWinner()
         }
@@ -186,7 +187,6 @@ function switchPlayer() {
         score = 0
         misses = 0
         game.currentPlayer = game.player2
-        timer = setInterval(countDown, 1000)
 
          word1Move = setInterval(moveNSpeed.move1Fn, 20);
          word2Move = setInterval(moveNSpeed.move2Fn, 24);
@@ -221,6 +221,7 @@ function endGame () {
             clearInterval(word6Move);
             $word6.css({marginLeft: "0px"});
             stopTimer()
+            game.start = false
        
     }
 }
@@ -361,12 +362,40 @@ var start;
 startBtn.on("click", startGame)
    
 function startGame() {
+    game.start = true
     startScreen.hide();
     gameScreen.show();
+    setInterval(countDown, 1000);
+    word1Move = setInterval(moveNSpeed.move1Fn, 20);
+    word2Move = setInterval(moveNSpeed.move2Fn, 24);
+    word3Move = setInterval(moveNSpeed.move3Fn, 28);
+    word4Move = setInterval(moveNSpeed.move4Fn, 32);
+    word5Move = setInterval(moveNSpeed.move5Fn, 36);
+    word6Move = setInterval(moveNSpeed.move6Fn, 40);
+
 
 }
 
-if(startBtn.on() !== true) {
+if(game.start === false) {
     gameScreen.hide()
+    // time = 20
+    clearInterval(word1Move);
+    $word1.css({marginLeft: "0px"});
+
+    clearInterval(word2Move);
+    $word2.css({marginLeft: "0px"});
+
+    clearInterval(word3Move);
+    $word3.css({marginLeft: "0px"});
+    
+    clearInterval(word4Move);
+    $word4.css({marginLeft: "0px"});
+
+    clearInterval(word5Move);
+    $word5.css({marginLeft: "0px"});
+
+    clearInterval(word6Move);
+    $word6.css({marginLeft: "0px"});
+    stopTimer()
     
 }
