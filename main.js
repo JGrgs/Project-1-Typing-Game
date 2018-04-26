@@ -372,6 +372,7 @@ function startGame() {
     word4Move = setInterval(moveNSpeed.move4Fn, 32);
     word5Move = setInterval(moveNSpeed.move5Fn, 36);
     word6Move = setInterval(moveNSpeed.move6Fn, 40);
+    $inputField.focus()
 
 
 }
